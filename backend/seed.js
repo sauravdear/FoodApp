@@ -1,5 +1,8 @@
 import 'dotenv/config';
+import dns from 'dns';
 import mongoose from 'mongoose';
+
+dns.setServers(['8.8.8.8', '8.8.4.4']);
 import FoodItem from './models/FoodItem.js';
 import Store from './models/Store.js';
 import TransferLog from './models/TransferLog.js';
