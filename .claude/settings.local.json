@@ -6,7 +6,9 @@
       "PowerShell(Get-Process -Name mongod -ErrorAction SilentlyContinue)",
       "PowerShell(\\(Get-Command mongod -ErrorAction SilentlyContinue\\).Source)",
       "PowerShell($dbPath = \"C:\\\\data\\\\db\"; if \\(-not \\(Test-Path $dbPath\\)\\) { New-Item -ItemType Directory -Force -Path $dbPath | Out-Null; \"Created $dbPath\" } else { \"Exists: $dbPath\" })",
-      "PowerShell(Invoke-RestMethod -Uri \"http://localhost:5000/api/inventory/recommendations\")"
+      "PowerShell(Invoke-RestMethod -Uri \"http://localhost:5000/api/inventory/recommendations\")",
+      "PowerShell(Invoke-RestMethod \"http://localhost:5000/api/health\")",
+      "PowerShell(Invoke-RestMethod \"http://localhost:5000/api/inventory/recommendations\")"
     ]
   }
 }

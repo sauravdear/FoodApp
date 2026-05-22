@@ -9,7 +9,7 @@ export const AppProvider = ({ children }) => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
 
-  const API = '/api';
+  const API = import.meta.env.VITE_API_URL || 'https://foodapp-c9v2.onrender.com/api';
 
   const fetchRecommendations = useCallback(async (params = {}) => {
     setLoading(true);
