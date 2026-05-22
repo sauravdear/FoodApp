@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(Get-Process -Name node -ErrorAction SilentlyContinue | Select-Object Id, ProcessName, CPU, @{N='Mem\\(MB\\)';E={[math]::Round\\($_.WorkingSet/1MB,1\\)}})",
+      "PowerShell(Get-Service -Name MongoDB -ErrorAction SilentlyContinue)",
+      "PowerShell(Get-Process -Name mongod -ErrorAction SilentlyContinue)",
+      "PowerShell(\\(Get-Command mongod -ErrorAction SilentlyContinue\\).Source)",
+      "PowerShell($dbPath = \"C:\\\\data\\\\db\"; if \\(-not \\(Test-Path $dbPath\\)\\) { New-Item -ItemType Directory -Force -Path $dbPath | Out-Null; \"Created $dbPath\" } else { \"Exists: $dbPath\" })",
+      "PowerShell(Invoke-RestMethod -Uri \"http://localhost:5000/api/inventory/recommendations\")"
+    ]
+  }
+}
