@@ -2,6 +2,6 @@
 *.pptx
 *.py
 start.bat
-.claude
-
+.claude/
+*.env
 
